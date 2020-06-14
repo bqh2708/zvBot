@@ -63,6 +63,10 @@ client.on("message", async message => {
             const canvas = Canvas.loadImage('./ZV.png')
             const ctx = canvas.getContext('2d');
 
+            ctx.font = "bold 15px Arial";
+            ctx.fillStyle = "#fffffff9";
+            ctx.fillText("LEVEL", 410, 78);
+
             const attachment = new Attachment(canvas.toBuffer(), `ZV.png`);
             message.channel.send(attachment);
             break;
@@ -72,4 +76,4 @@ client.on("message", async message => {
 
 
     }
-}
+});
